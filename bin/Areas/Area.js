@@ -34,6 +34,7 @@ class Area {
         this.services = {};
         this.authorizedBonuses = ["xp_fight", "xp_collect", "xp_craft", "gold_drop", "item_drop", "collect_drop"];
         this.requiredAchievements = [];
+        this.bonusresetCooldown = 0;
     }
 
     async loadArea() {
@@ -357,7 +358,16 @@ class Area {
     canIFightHere() {
         return this.fightPossible;
     }
-
+    
+    //returns when area bonus can be reset
+    getResetCooldown() {
+       return this.bonusresetCooldown;
+    }
+    
+    canResetBonuses() {
+        return (this.getResetCooldown() <= Date.now());
+    }
+    
     /**
      * 
      * @param {string} serviceName 
