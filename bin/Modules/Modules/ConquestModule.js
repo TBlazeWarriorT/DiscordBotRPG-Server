@@ -109,6 +109,34 @@ class ConquestModule extends GModule {
             await next();
             return res.json(data);
         });
+        
+        this.router.post("/area/bonus/resetbonuses", async (req, res, next) => {
+            let data = {};
+            let tGuildId = await Globals.connectedUsers[res.locals.id].character.getIDGuild();
+            if (await res.locals.currentArea.getOwnerID() === tGuildId) {
+                if (await Globals.connectedUsers[res.locals.id].character.isInGuild() && (await Globals.connectedGuilds[tGuildId].getRankCharacter(Globals.connectedUsers[res.locals.id].character.id)) === 3) {
+                    if (!await AreaTournament.haveStartedByIdArea(Globals.connectedUsers[res.locals.id].character.getIdArea())) {
+                        if (res.locals.currentArea.canResetBonuses()) {
+                            await res.locals.currentArea.resetBonuses();
+                            await res.locals.currentArea.setResetCooldown(Date.now() + 86400000);
+                            data.success = Translator.getString(res.locals.lang, "area", "reset_stats");
+                        } else {
+                            let langStr = res.locals.lang.length > 2 ? res.locals.lang : res.locals.lang + "-" + res.locals.lang.toUpperCase();
+                            data.error = Translator.getString(res.locals.lang, "errors", "area_reset_wait_x", [res.locals.currentArea.getResetCooldown().toLocaleString(langStr) + " UTC"]);
+                        }
+                    } else {
+                        data.error = Translator.getString(res.locals.lang, "errors", "guild_tournament_started_generic");
+                    }
+                } else {
+                    data.error = Translator.getString(res.locals.lang, "errors", "generic_cant_do_that");
+                }
+            } else {
+                data.error = Translator.getString(res.locals.lang, "errors", "guild_dont_own_this_area");
+            }
+            data.lang = res.locals.lang;
+            await next();
+            return res.json(data);
+        });
 
 
         this.router.get("/area/bonuses", async (req, res, next) => {
