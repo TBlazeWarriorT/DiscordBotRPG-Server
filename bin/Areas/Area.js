@@ -360,15 +360,15 @@ class Area {
     }
     
     //returns when area bonus can be reset
-    getResetCooldown() {
+    async getResetCooldown() {
        return this.bonusresetCooldown;
     }
     
-    getResetCooldown(cooldown) {
+    async setResetCooldown(cooldown) {
        this.bonusresetCooldown = cooldown;
     }
     
-    canResetBonuses() {
+    async canResetBonuses() {
         return (this.getResetCooldown() <= Date.now());
     }
     
