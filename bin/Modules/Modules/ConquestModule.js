@@ -116,13 +116,17 @@ class ConquestModule extends GModule {
             if (await res.locals.currentArea.getOwnerID() === tGuildId) {
                 if (await Globals.connectedUsers[res.locals.id].character.isInGuild() && (await Globals.connectedGuilds[tGuildId].getRankCharacter(Globals.connectedUsers[res.locals.id].character.id)) === 3) {
                     if (!await AreaTournament.haveStartedByIdArea(Globals.connectedUsers[res.locals.id].character.getIdArea())) {
-                        if (res.locals.currentArea.canResetBonuses()) {
-                            await res.locals.currentArea.resetBonuses();
-                            await res.locals.currentArea.setResetCooldown(Date.now() + 86400000);
-                            data.success = Translator.getString(res.locals.lang, "area", "reset_stats");
+                        if (await res.locals.currentArea.getTotalLevel() > 0) {
+                            if (res.locals.currentArea.canResetBonuses()) {
+                                await res.locals.currentArea.resetBonuses();
+                                await res.locals.currentArea.setResetCooldown(Date.now() + 86400000);
+                                data.success = Translator.getString(res.locals.lang, "area", "reset_stats");
+                            } else {
+                                let langStr = res.locals.lang.length > 2 ? res.locals.lang : res.locals.lang + "-" + res.locals.lang.toUpperCase();
+                                data.error = Translator.getString(res.locals.lang, "errors", "area_reset_wait_x", [res.locals.currentArea.getResetCooldown().toLocaleString(langStr) + " UTC"]);
+                            }
                         } else {
-                            let langStr = res.locals.lang.length > 2 ? res.locals.lang : res.locals.lang + "-" + res.locals.lang.toUpperCase();
-                            data.error = Translator.getString(res.locals.lang, "errors", "area_reset_wait_x", [res.locals.currentArea.getResetCooldown().toLocaleString(langStr) + " UTC"]);
+                            data.error = Translator.getString(res.locals.lang, "errors", "area_already_reset");
                         }
                     } else {
                         data.error = Translator.getString(res.locals.lang, "errors", "guild_tournament_started_generic");
