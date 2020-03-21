@@ -368,6 +368,16 @@ class Area {
         return (this.getResetCooldown() <= Date.now());
     }
     
+    //might or might not work
+    async getTotalLevel() {
+        let res = await conn.query("SELECT * FROM areasbonuses WHERE idArea = ? AND idBonusTypes;", [this.id]);
+        let totalLevel = 0;
+        for (let o of res) {
+            totalLevel += o.value;
+        }
+        return totalLevel;
+    }
+    
     /**
      * 
      * @param {string} serviceName 
