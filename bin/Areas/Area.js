@@ -364,6 +364,10 @@ class Area {
        return this.bonusresetCooldown;
     }
     
+    getResetCooldown(cooldown) {
+       this.bonusresetCooldown = cooldown;
+    }
+    
     canResetBonuses() {
         return (this.getResetCooldown() <= Date.now());
     }
