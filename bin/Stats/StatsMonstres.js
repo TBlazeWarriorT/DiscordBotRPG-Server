@@ -25,7 +25,10 @@ class StatsMonstres extends Stats {
         for (let stat in res) {
             let percentage = parseInt(res[stat].percentage, 10) / 100;
 
-            if (res[stat].nom != "armor") {
+            if (res[stat].nom == "constitution") {
+                let hpBonus = level > 80 ? (level - 80) / 100 + 1 : 1;
+                this[res[stat].nom] = Math.ceil(percentage * totalStats * hpBonus);
+            } else if (res[stat].nom != "armor") {
                 this[res[stat].nom] = Math.ceil(percentage * totalStats);
             } else {
                 this[res[stat].nom] = Math.ceil(percentage * optimalArmor);
