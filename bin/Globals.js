@@ -15,7 +15,7 @@ let collectChances = {
     superieur: 9 / 100,
     epique: 1.25 / 100,
     legendaire: 0.25 / 100,
-    mythic: 0.025 / 100
+    mythic: 0.04 / 100
 }
 
 /**
