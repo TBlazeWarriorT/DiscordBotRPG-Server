@@ -42,6 +42,9 @@ class CraftSystem {
             case 5:
                 chanceToGet = Globals.collectChances.legendaire;
                 break;
+            case 6:
+                chanceToGet = Globals.collectChances.mythic;
+                break;
         }
         //console.log(chance + " < " + chanceToGet * luckModifier);
         return chanceToGet * luckModifier > chance;
