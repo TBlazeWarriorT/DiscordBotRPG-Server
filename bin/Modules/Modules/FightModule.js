@@ -56,7 +56,10 @@ class FightModule extends GModule {
                         } else {
                             enemies = Globals.areasManager.getMonsterIdIn(Globals.connectedUsers[res.locals.id].character.getIdArea(), idEnemy);
                         }
-                        let response = await Globals.fightManager.fightPvE([Globals.connectedUsers[res.locals.id].character], enemies, res.locals.id, canIFightTheMonster, res.locals.lang);
+                        //checks if the player ran the command in the final boss zone
+                        let finalBoss = (Globals.connectedUsers[res.locals.id].character.getIdArea() == 47 ? TRUE : FALSE);
+                        //I should add a thing that cancels the command here if the player tries to do ::fight 2 in area 47, cause I'll need to add the final boss as fight 2
+                        let response = await Globals.fightManager.fightPvE([Globals.connectedUsers[res.locals.id].character], enemies, res.locals.id, canIFightTheMonster, res.locals.lang, finalBoss);
                         if (response.error) {
                             data.error = response.error;
                         } else {
