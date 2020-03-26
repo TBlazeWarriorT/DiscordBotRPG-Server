@@ -1,0 +1,690 @@
+
+
+this is not a real sql file. It's just me explaining what I did
+
+
+INSERT INTO levelsrequire VALUES 
+(101, 2060602),
+(102, 2122416),
+(103, 2185454),
+(104, 2249728),
+(105, 2315250),
+[...]
+(196, 15059072),
+(197, 15290746),
+(198, 15524784),
+(199, 15761198),
+(200, 16,000,000),
+(201, 100,000,000); default xp requirements up to level 200, 201 requires 100m xp and is an "extra" level
+
+
+
+INSERT INTO itemsbase VALUES 
+- id, type, rarity, image, "sousType" whatever that is
+(Skystone, 5, 5, 'unknown', 1), I replaced IDs with actual names so you can know what's happening
+(Heavensbloom, 5, 5, 'unknown', 2),
+(Lightwood, 5, 5, 'unknown', 3),
+(Skystone Sword, 1, 5, 'unknown', 4),
+(Skystone Chestplate, 2, 5, 'unknown', 6),
+(Skystone Leggings, 3, 5, 'unknown', 6),
+(Skystone Helmet, 4, 5, 'unknown', 6),
+(Dragonflame Sword, 1, 6, 'unknown', 4),
+(Dragonflame Chestplate, 2, 6, 'unknown', 6),
+(Dragonflame Leggings, 3, 6, 'unknown', 6),
+(Dragonflame Helmet, 4, 6, 'unknown', 6),
+(Dragonflame Scale, 5, 6, 'unknown', 13),
+(Dragonstone, 5, 6, 'unknown', 1),
+(Dragonbloom, 5, 6, 'unknown', 2),
+(Flamewood, 5, 6, 'unknown', 3),
+(Flame Dragon, 8, 6, 'unknown', 11);
+
+
+
+INSERT INTO localizationitems VALUES
+(57, 'en', 'Skystone', 'A very powerful sky rock, but it is as light as a feather.'),
+(57, 'pt-BR', 'Rocha-Céu', 'Uma rocha muito poderosa do céu, mas ela é tão leve quanto uma pluma.'),
+(58, 'en', 'Heavensbloom', 'A delicate flower that looks like it came straight from the heavens.'),
+(58, 'pt-BR', 'Florceleste', 'Uma delicada flor que parece ter vindo diretamente do paraíso.'),
+(59, 'en', 'Lightwood', 'A wonderful-looking blue and very light chunk of wood. You can hear the wind blowing through the many gaps in this interlaced log.'),
+(59, 'pt-BR', 'Pau-luz', 'Um pedaço de madeira com um visual maravilhoso. Você pode ouvir o vento soprar por entre as várias lacunas neste tronco entrelaçado.'),
+(60, 'en', 'Skystone Sword', 'A light blue ornated sword, as light as a feather, as sharp as Excalibur.'),
+(60, 'pt-BR', 'Espada de Rocha-Céu', 'Uma espada ornamentada azul-claro, tão leve quanto uma pena, tão afiada quanto Excalibur.'),
+(61, 'en', 'Skystone Chestplate', 'You can easily be mistaken with an angel while wearing this legendary chestplate.'),
+(61, 'pt-BR', 'Peitoral de Rocha-Céu', 'Você pode ser facilmente confundido com um anjo enquanto usando este peitoral lendário.'),
+(62, 'en', 'Skystone Leggings', 'You feel lighter than naked when using those leggings, but you become as resistant as stone.'),
+(62, 'pt-BR', 'Perneiras de Rocha-Céu', 'Você se sente mais leve do que nu enquanto usa estas perneiras, mas você se torna tão resistente quanto pedra.'),
+(63, 'en', 'Skystone Helmet', 'Halo not included... Or... Maybe it is!'),
+(63, 'pt-BR', 'Capacete de Rocha-Céu', 'Auréola não incluída... Ou... Talvez sim!'),
+(64, 'en', 'Dragonflame Sword', 'This sword is said to carry the heart and power of a dragon. Looking at it, you have no doubt it\'s true.'),
+(64, 'pt-BR', 'Espada da Chama Dracônica', 'Diz-se esta espada carregar o coração e o poder de um dragão. Olhando para ela, você não tem dúvidas de que é verdade.'),
+(65, 'en', 'Dragonflame Chestplate', 'This chestplate was only ever mentioned in rumors, but those would say it grants you the defense of the toughest dragon.'),
+(65, 'pt-BR', 'Peitoral da Chama Dracônica', 'Este peitoral só foi antes mencionado em rumores, mas estes diriam que ele lhe garante a defesa igual a do mais resistente dragão.'),
+(66, 'en', 'Dragonflame Leggings', 'These magical leggings are not only incredible in visuals and stats, but they also let you fly around for a bit!'),
+(66, 'pt-BR', 'Perneiras da Chama Dracônica', 'Estas perneiras mágicas não são só incríveis em stats e no visual, mas elas também lhe permitem voar por aí um pouco!'),
+(67, 'en', 'Dragonflame Crown', 'This mythical item is supreme sign of power that carries the might of a dragon. Become indomitable.'),
+(67, 'pt-BR', 'Coroa da Chama Dracônica', 'Este item mítico é o símbolo supremo de poder que carrega a grandeza de um dragão. Torne-se indomável.'),
+(68, 'en', 'Dragonflame Scale', 'A pure dragon scale of immense power. Used to craft even more powerful mythical items.'),
+(68, 'pt-BR', 'Escama da Chama Dracônica', 'Uma escama de dragão pura de poder imenso. Usada pra criar items míticos ainda mais poderosos.'),
+(69, 'en', 'Dragonstone', 'A glowing red gem that is always at a very, very high temperature regardless of the ambient around it.'),
+(69, 'pt-BR', 'Pedragão', 'Uma joia vermelha e brilhante que está sempre a temperaturas muito, muito altas independente do ambiente em volta dela.'),
+(70, 'en', 'Dragonbloom', 'This draconic flower carries a bit of a dragon\'s essence on it\'s fiery and powerful yet delicate look.'),
+(70, 'pt-BR', 'Flor-Dragão', 'Esta flor dracônica carrega um pouco da essência de um dragão em seu visual ígneo e poderoso apesar de delicado.'),
+(71, 'en', 'Flamewood', 'Dark red wood that is only found in lands where fiery dragons have lived. It is believed to be a material as strong as steel.'),
+(71, 'pt-BR', 'Madeira das Chamas', 'Madeira vermelho-escuro que é apenas encontrada em terras onde dragões de fogo habitaram. Acredita-se ser um material tão resistente quanto aço.'),
+(72, 'en', 'Flame Dragon', 'A slightly smaller fiery dragon that is very docile. After a while, an expert adventurer like you learned to ride it to travel at ridiculous speeds with your new companion.'),
+(72, 'pt-BR', 'Dragão de Chamas', 'Um dragão de fogo ligeiramente menor que é bastante dócil. Depois de algum tempo, um aventureiro experiente como você aprendeu a montar e viajar a velocidades ridículas com seu novo companheiro.');
+
+
+UPDATE craftitem SET maxLevel = 201;
+
+
+INSERT INTO craftitem VALUES
+craftID, maxLevel, minLevel, Item
+(25, 200, 160, Skystone Sword),
+(26, 200, 160, Skystone Chestplate),
+(27, 200, 160, Skystone Leggings),
+(28, 200, 160, Skystone Helmet),
+(29, 200, 200, Dragonflame Sword),
+(30, 200, 200, Dragonflame Chestplate),
+(31, 200, 200, Dragonflame Leggings),
+(32, 200, 200, Dragonflame Helmet);
+
+
+INSERT INTO craftitemsneeded
+VALUES
+craftID, item, amount
+(25, Skystone, 10),
+(25, Heavensbloom, 5),
+(25, Lightwood, 5),
+(26, Skystone, 10),
+(26, Heavensbloom, 5),
+(26, Lightwood, 5),
+(27, Skystone, 10),
+(27, Heavensbloom, 5),
+(27, Lightwood, 5),
+(28, Skystone, 10),
+(28, Heavensbloom, 5),
+(28, Lightwood, 5),
+(29, Dragonflame Scale, 10),
+(29, Dragonstone, 2),
+(29, Dragonbloom, 2),
+(29, Flamewood, 2),
+(30, Dragonflame Scale, 10),
+(30, Dragonstone, 4),
+(30, Dragonbloom, 1),
+(30, Flamewood, 1),
+(31, Dragonflame Scale, 10),
+(31, Dragonstone, 1),
+(31, Dragonbloom, 1),
+(31, Flamewood, 4),
+(32, Dragonflame Scale, 10),
+(32, Dragonstone, 1),
+(32, Dragonbloom, 4),
+(32, Flamewood, 1);
+
+
+INSERT INTO regions VALUES
+(6),
+(7);
+
+
+
+INSERT INTO localizationregions
+VALUES
+    (6, "en", "The Underground World", "https://i.imgur.com/zcunYo6.jpg"),
+    (7, "en", "Dragonflame Rift", "https://i.imgur.com/zcunYo6.jpg");
+
+
+-- Areas
+-- type 1 wild, 2 city, 3 dungeon
+INSERT INTO areas
+VALUES
+(Cave Entrance, 'https://66.media.tumblr.com/abf11eb99ba554ebfb370e4a75ef1c25/tumblr_o0e6nlxl8K1uufoudo1_1280.jpg', 1, 1, 5),
+(Underground Dwarf Kingdom, 'https://i.pinimg.com/originals/81/53/f0/8153f0eaaed7be71c4676005db9fda8c.jpg', 2, 1, 5),
+(Deep Valley, 'https://i.pinimg.com/736x/88/c0/b3/88c0b327ed1b541e3e87c47ec70a95b3.jpg', 1, 1, 5),
+(Ancient Forest of the Depths, 'https://i.pinimg.com/originals/a8/c3/26/a8c32652408410f2ca0ae913919bc7f7.jpg', 1, 1, 5),
+(Deeper Cracks, 'https://img06.deviantart.net/0c9a/i/2013/284/5/f/crystal_caves_by_josheiten-d5z8fes.png', 1, 1, 5),
+(Gigantic Cave, 'https://i.imgur.com/NDJBinz.jpg', 3, 1, 5),
+(Floating Ruins, 'https://wallup.net/wp-content/uploads/2016/04/10/151959-ruin-fantasy_art-floating-rock-arch-artwork-748x421.jpg', 2, 1, 5),
+(Skylands Floating Cluster, 'https://i.imgur.com/mupXWzO.png', 1, 1, 5),
+(Giant Creature Rift, 'https://cdna.artstation.com/p/assets/images/images/000/143/578/large/yongsub-noh-yong-51.jpg?1443928790', 1, 1, 5),
+(Skyfrost Floating Island, 'https://cdnb.artstation.com/p/assets/images/images/004/349/057/large/kent-davis-ruinsofdraconia-web.jpg?1482792151', 1, 1, 5),
+(Floating Flame Island, 'https://cdnb.artstation.com/p/assets/images/images/004/349/037/large/kent-davis-thordak.jpg?1482791936', 1, 1, 5),
+(Dragonflame Ruins, 'https://i.imgur.com/CCLqb6z.jpg', 2, 1, 5),
+(Dragon's Rift, 'https://www.wallpaperflare.com/static/294/358/479/fantasy-art-creature-giant-animated-wallpaper-preview.jpg', 3, 1, 5);
+
+
+
+INSERT INTO areasitems
+VALUES
+area, itemID, drop chance
+(Cave Entrance, Mithril Sword, 0.003),
+(Cave Entrance, Mithril Chest, 0.003),
+(Cave Entrance, Mithril Leggings, 0.003),
+(Cave Entrance, Mithril Helmet, 0.003),
+
+(Underground Dwarf Kingdom, Mithril Sword, 0.003),
+(Underground Dwarf Kingdom, Mithril Chest, 0.003),
+(Underground Dwarf Kingdom, Mithril Leggings, 0.003),
+(Underground Dwarf Kingdom, Mithril Helmet, 0.003),
+
+(Deep Valley, Mithril Sword, 0.003),
+(Deep Valley, Mithril Chest, 0.003),
+(Deep Valley, Mithril Leggings, 0.003),
+(Deep Valley, Mithril Helmet, 0.003),
+
+(Ancient Forest of the Depths, Mithril Sword, 0.003),
+(Ancient Forest of the Depths, Mithril Chest, 0.003),
+(Ancient Forest of the Depths, Mithril Leggings, 0.003),
+(Ancient Forest of the Depths, Mithril Helmet, 0.003),
+
+(Deeper Cracks, Mithril Sword, 0.003),
+(Deeper Cracks, Mithril Chest, 0.003),
+(Deeper Cracks, Mithril Leggings, 0.003),
+(Deeper Cracks, Mithril Helmet, 0.003),
+
+(Gigantic Cave, Mithril Sword, 0.003),
+(Gigantic Cave, Mithril Chest, 0.003),
+(Gigantic Cave, Mithril Leggings, 0.003),
+(Gigantic Cave, Mithril Helmet, 0.003),
+(Gigantic Cave, Energy Drink, 0),
+(Gigantic Cave, Exotic Energy Drink, 0),
+(Gigantic Cave, Golden Energy Drink, 0),
+
+(Skylands Floating Cluster, Skystone Sword, 0.0025),
+(Skylands Floating Cluster, Skystone Chestplate, 0.0025),
+(Skylands Floating Cluster, Skystone Leggings, 0.0025),
+(Skylands Floating Cluster, Skystone Helmet, 0.0025),
+(Skylands Floating Cluster, Skystone, 0.003),
+(Skylands Floating Cluster, Dragonflame Scale, 0.001),
+
+(Giant Creature Rift, Skystone Sword, 0.0025),
+(Giant Creature Rift, Skystone Chestplate, 0.0025),
+(Giant Creature Rift, Skystone Leggings, 0.0025),
+(Giant Creature Rift, Skystone Helmet, 0.0025),
+(Giant Creature Rift, Skystone, 0.003),
+(Giant Creature Rift, Dragonflame Scale, 0.001),
+
+(Skyfrost Floating Island, Skystone Sword, 0.0025),
+(Skyfrost Floating Island, Skystone Chestplate, 0.0025),
+(Skyfrost Floating Island, Skystone Leggings, 0.0025),
+(Skyfrost Floating Island, Skystone Helmet, 0.0025),
+(Skyfrost Floating Island, Skystone, 0.003),
+(Skyfrost Floating Island, Dragonflame Scale, 0.001),
+
+(Floating Flame Island, Skystone Sword, 0.0025),
+(Floating Flame Island, Skystone Chestplate, 0.0025),
+(Floating Flame Island, Skystone Leggings, 0.0025),
+(Floating Flame Island, Skystone Helmet, 0.0025),
+(Floating Flame Island, Skystone, 0.003),
+(Floating Flame Island, Dragonflame Scale, 0.001),
+(Floating Flame Island, Flame Dragon, 0.00005),
+
+(Dragon's Rift, Skystone Sword, 0.0025),
+(Dragon's Rift, Skystone Chestplate, 0.0025),
+(Dragon's Rift, Skystone Leggings, 0.0025),
+(Dragon's Rift, Skystone Helmet, 0.0025),
+(Dragon's Rift, Skystone, 0.03),
+(Dragon's Rift, Dragonflame Scale, 0.001),
+(Dragon's Rift, Flame Dragon, 0.0002),
+(Dragon's Rift, Multicoloured Energy Drink, 0.1),
+(Dragon's Rift, Divine Energy Drink, 0.05);
+
+
+
+
+INSERT INTO areasmonsterslevels
+VALUES
+(Cave Entrance, 105, 110),
+(Underground Dwarf Kingdom, 130, 130),
+(Deep Valley, 115, 125),
+(Ancient Forest of the Depths, 130, 135),
+(Deeper Cracks, 140, 145),
+(Gigantic Cave, 150, 150),
+(Floating Ruins, 160, 160),
+(Skylands Floating Cluster, 160, 165),
+(Giant Creature Rift, 170, 175),
+(Skyfrost Floating Island, 180, 185),
+(Floating Flame Island, 195, 200),
+(Dragonflame Ruins, 200, 200),
+(Dragon's Rift, 200, 200);
+
+
+
+
+INSERT INTO localizationareas VALUES 
+(35, 'en', 'Cave Entrance', 'You enter the start of a cave that seems to keep going infinitely deeper and deeper... And it also seems infested!'),
+(35, 'pt-BR', 'Entrada da Caverna', 'Você entra no começo desta caverna que parece continuar indo infinitamente mais e mais fundo... E também parece estar infestada!'),
+(36, 'en', 'Underground Dwarf Kingdom', 'Majestic and shiny underworld kingdom full of the most skilled Dwarf blackmiths, the same ones that built the Ancient Dwarf Forge, now right in front of you! This place has lots of miniature furniture everywhere too!'),
+(36, 'pt-BR', 'Reino Anão Subterrâneo', 'Majestoso e brilhante reino subterrâneo cheio dos mais habilidosos ferreiros Anões, os mesmos que construiram a Antiga Forja Anã, agora bem à sua frente! Este lugar tem uma grande quantidade de mobília em miniatura em todo lugar, também!'),
+(37, 'en', 'Deep Valley', 'This deep and dark valley is infested with all types of bizarre creatures and insects.'),
+(37, 'pt-BR', 'Vale Profundo', 'Este vale escuro e profundo está infestado com todos tipos de criaturas bizarras e insetos.'),
+(38, 'en', 'Ancient Forest of the Depths', 'Even in the depths, an ancient forest was tough enough to survive through time and darkness and stay as lively as usual... and as deadly!'),
+(38, 'pt-BR', 'Antiga Floresta das Profundezas', 'Mesmo nas profundezas, uma anciã floresta foi resistente o suficiente para sobreviver ao tempo e a escuridão e continuar tão vívida quanto sempre... e tão mortal quanto!'),
+(39, 'en', 'Deeper Cracks', 'The deepest place in the cave, it\'s full of spiky rocks that make it harder and harder to explore and be in, yet horrendous creatures insist on staying here and attacking anything in their way.'),
+(39, 'pt-BR', 'Rachaduras Profundas', 'O lugar mais profundo da caverna, é cheio de rochas pontiagudas que fazem-no mais e mais difícil de explorar e de se estar, e ainda assim criaturas horrendas insistem em continuar aqui e atacar qualquer coisa em seu caminho.'),
+(40, 'en', 'Gigantic Cave', 'The deepest part of the cave, a very wide, filled with energy crystals, and somewhat beautiful part of this cave that seemed endless, with the most powerful creature of the cave resting within.'),
+(40, 'pt-BR', 'Caverna Gigantesca', 'A parte mais profunda desta caverna, uma muito ampla, cheia de cristais de energia, e de certa forma bonita parte desta caverna que parecia não ter fim, contendo a mais poderosa criatura da caverna repousando dentro dela.'),
+(41, 'en', 'Floating Ruins', 'What once used to be a grand city that defied the laws of gravity and of progress, now only ruins.'),
+(41, 'pt-BR', 'Ruínas Flutuantes', 'O que costumava um dia ser uma grandiosa cidade que desafiava as leis da gravidade e do progresso, agora apenas ruínas.'),
+(42, 'en', 'Skylands Floating Cluster', 'A cluster of beautiful islands full of powerful creatures, hovering over the skies...'),
+(42, 'pt-BR', 'Arquipelágo Flutuante das Terras do Céu', 'Um arquipélago de lindas ilhas e criaturas poderosas, pairando pelos céus... '),
+(43, 'en', 'Giant Creature Rift', 'An ancient and giant flying creature, so big that a whole island full of turtles and other creatures has formed on it\'s back as it roams through the skies.'),
+(43, 'pt-BR', 'Fenda da Criatura Gigante', 'Uma criatura voadora gigante e anciã, tão grande que uma ilha inteira repleta de tartarugas e outras criaturas se formou em suas costas enquanto ela vaga pelos céus.'),
+(44, 'en', 'Skyfrost Floating Island', 'Floating high up in the sky, while deceptively beautiful, these lands are cold and deadly.'),
+(44, 'pt-BR', 'Ilha Flutuante do Gelo-dos-céus', 'Flutuando alto no céu, apesar de enganosamente belas, estas terras são frias e mortais.'),
+(45, 'en', 'Floating Flame Island', 'The place where the skies and flames meet and only the most powerful creatures can survive.'),
+(45, 'pt-BR', 'Ilha da Chama Flutuante', 'O lugar onde os céus e chamas encontram-se e apenas as mais poderosas criaturas podem sobreviver.'),
+(46, 'en', 'Dragonflame Ruins', 'What is left of the legendary and greatest of the great Dragon Civilization, the remains of one of the most powerful places that existed in this world.'),
+(46, 'pt-BR', 'Ruinas da Chama Dracônica', 'O que sobrou da lendária e maior das maiores Civilização Dracônica, o restante de um dos lugares mais poderosos que existiram neste mundo.'),
+(47, 'en', 'Dragons\' Rift', 'The legendary dungeon where the 5 True Dragons live, the most pure and powerful among the dragons, each being unimaginably overpowered.')
+(47, 'pt-BR', 'Fenda Dracônica', 'A masmorra lendária onde os 5 Verdadeiros Dragões vivem, os mais puros e poderosos entre os dragões, cada um sendo inimaginávelmente poderosos demais.');
+
+
+
+
+INSERT INTO areasresources
+VALUES
+area, resource
+got lazy to convert some from ids to names, they're random shit anyways
+(Cave Entrance, 21),
+(Cave Entrance, 22),
+(Cave Entrance, 23),
+(Cave Entrance, 24),
+(Cave Entrance, 25),
+(Deep Valley, 21),
+(Deep Valley, 24),
+(Deep Valley, 28),
+(Deep Valley, 30),
+(Ancient Forest of the Depths, 34),
+(Ancient Forest of the Depths, 35),
+(Ancient Forest of the Depths, 27),
+(Ancient Forest of the Depths, 29),
+(Deeper Cracks, 23),
+(Deeper Cracks, 24),
+(Deeper Cracks, 25),
+(Skylands Floating Cluster, 26),
+(Skylands Floating Cluster, 28),
+(Skylands Floating Cluster, Skystone),
+(Skylands Floating Cluster, Heavensbloom),
+(Skylands Floating Cluster, Lightwood),
+(Giant Creature Rift, 27),
+(Giant Creature Rift, 30),
+(Giant Creature Rift, Heavensbloom),
+(Giant Creature Rift, Lightwood),
+(Giant Creature Rift, Dragonbloom),
+(Skyfrost Floating Island, 24),
+(Skyfrost Floating Island, 25),
+(Skyfrost Floating Island, Skystone),
+(Skyfrost Floating Island, Heavensbloom),
+(Skyfrost Floating Island, Dragonstone),
+(Floating Flame Island, 34),
+(Floating Flame Island, Skystone),
+(Floating Flame Island, Dragonstone),
+(Floating Flame Island, Dragonbloom),
+(Floating Flame Island, Flamewood);
+
+
+INSERT INTO areasregions
+VALUES
+(Cave Entrance, 6),
+(Underground Dwarf Kingdom, 6),
+(Deep Valley, 6),
+(Ancient Forest of the Depths, 6),
+(Deeper Cracks, 6),
+(Gigantic Cave, 6),
+
+(Floating Ruins, 7),
+(Skylands Floating Cluster, 7),
+(Giant Creature Rift, 7),
+(Skyfrost Floating Island, 7),
+(Floating Flame Island, 7),
+(Dragonflame Ruins, 7),
+(Dragon's Rift, 7);
+
+
+
+-- Paths
+INSERT INTO areaspaths
+VALUES
+area1, area2, time, cost
+(Antique Dwarf Forge, Cave Entrance, 300, 0),
+
+(Cave Entrance, Antique Dwarf Forge, 300, 0),
+(Cave Entrance, Underground Dwarf Kingdom, 30, 0),
+(Cave Entrance, Floating Ruins, 350, 0),
+
+(Underground Dwarf Kingdom, Cave Entrance, 45, 0),
+(Underground Dwarf Kingdom, Deep Valley, 45, 0),
+(Underground Dwarf Kingdom, Ancient Forest of the Depths, 45, 0),
+
+(Deep Valley, Underground Dwarf Kingdom, 45, 0),
+(Deep Valley, Deeper Cracks, 60, 0),
+(Deep Valley, Gigantic Cave, 60, 0),
+
+(Ancient Forest of the Depths, Underground Dwarf Kingdom, 45, 0),
+(Ancient Forest of the Depths, Gigantic Cave, 60, 0),
+
+(Deeper Cracks, Deep Valley, 60, 0),
+
+(Gigantic Cave, Deep Valley, 60, 0),
+
+(Floating Ruins, Cave Entrance, 300, 0),
+(Floating Ruins, Skylands Floating Cluster, 30, 0),
+(Floating Ruins, Giant Creature Rift, 30, 0),
+
+(Skylands Floating Cluster, Floating Ruins, 30, 0),
+(Skylands Floating Cluster, Giant Creature Rift, 30, 0),
+
+(Giant Creature Rift, Floating Ruins, 30, 0),
+(Giant Creature Rift, Skyfrost Floating Island, 30, 0),
+(Giant Creature Rift, Floating Flame Island, 30, 0),
+
+(Skyfrost Floating Island, Giant Creature Rift, 30, 0),
+(Skyfrost Floating Island, Dragon's Rift, 60, 0),
+
+(Floating Flame Island, Giant Creature Rift, 30, 0),
+(Floating Flame Island, Dragonflame Ruins, 60, 0),
+(Floating Flame Island, Dragon's Rift, 60, 0),
+
+(Dragonflame Ruins, Floating Flame Island, 60, 0),
+(Dragonflame Ruins, Dragon's Rift, 60, 0),
+
+(Dragon's Rift, Skyfrost Floating Island, 60, 0),
+(Dragon's Rift, Floating Flame Island, 60, 0),
+(Dragon's Rift, Dragonflame Ruins, 60, 0);
+
+
+
+INSERT INTO craftbuilding
+VALUES
+(10, Underground Dwarf Kingdom, 1, 5, 6, 101, 160),
+(11, Floating Ruins, 1, 5, 6, 160, 200),
+(12, Dragonflame Ruins, 1, 6, 6, 200, 200);
+
+
+
+REPLACE INTO monstres
+VALUES
+(82, 0, 1);
+
+INSERT INTO monstres
+VALUES
+(83, 0, 1),
+(84, 0, 1),
+(85, 0, 2),
+
+(86, 0, 1),
+(87, 0, 1),
+(88, 0, 2),
+
+(89, 0, 1),
+(90, 0, 1),
+(91, 0, 2),
+
+(92, 0, 1),
+(93, 0, 1),
+(94, 0, 2),
+
+(95, 0, 3),
+
+(96, 0, 1),
+(97, 0, 1),
+(98, 0, 1),
+(99, 0, 2),
+
+(100, 0, 1),
+(101, 0, 1),
+(102, 0, 1),
+(103, 0, 2),
+
+(104, 0, 1),
+(105, 0, 1),
+(106, 0, 2),
+
+(107, 0, 1),
+(108, 0, 1),
+(109, 0, 2),
+
+(110, 0, 3),
+(111, 0, 3),
+(112, 0, 3),
+(113, 0, 3);
+
+INSERT INTO areasmonsters
+VALUES
+area, group, monster
+(Cave Entrance, 78, 82),
+(Cave Entrance, 79, 83),
+(Cave Entrance, 80, 84),
+(Cave Entrance, 81, 85),
+
+(Deep Valley, 82, 86),
+(Deep Valley, 83, 87),
+(Deep Valley, 84, 88),
+
+(Ancient Forest of the Depths, 85, 89),
+(Ancient Forest of the Depths, 86, 90),
+(Ancient Forest of the Depths, 87, 91),
+
+(Deeper Cracks, 88, 92),
+(Deeper Cracks, 89, 93),
+(Deeper Cracks, 90, 94),
+
+(Gigantic Cave, 91, 95),
+(Gigantic Cave, 91, 86),
+
+(Skylands Floating Cluster, 92, 96),
+(Skylands Floating Cluster, 93, 97),
+(Skylands Floating Cluster, 94, 98),
+(Skylands Floating Cluster, 95, 99),
+
+(Giant Creature Rift, 96, 100),
+(Giant Creature Rift, 97, 101),
+(Giant Creature Rift, 98, 102),
+(Giant Creature Rift, 99, 103),
+
+(Skyfrost Floating Island, 100, 104),
+(Skyfrost Floating Island, 101, 105),
+(Skyfrost Floating Island, 102, 106),
+
+(Floating Flame Island, 103, 107),
+(Floating Flame Island, 104, 108),
+(Floating Flame Island, 105, 109),
+
+(Dragon's Rift, 106, 110),
+(Dragon's Rift, 106, 111),
+(Dragon's Rift, 106, 112),
+(Dragon's Rift, 106, 113);
+
+INSERT INTO localizationmonsters
+VALUES
+Cave Entrance
+('82', 'en', 'Cave Leeches'),
+('83', 'en', 'Crystal Vermin'),
+('84', 'en', 'Stone Lizard'),
+('85', 'en', 'Darkstone Golem'),
+
+Deep valley
+('86', 'en', 'Giant Crawler'),
+('87', 'en', 'Arthropleura'),
+('88', 'en', 'Crawler of the Abyss'),
+
+Ancient Forest of the Depths
+('89', 'en', 'Meganeura'),
+('90', 'en', 'Mammoth'),
+('91', 'en', 'Ancient Giant Blackwidow'),
+
+Deeper Cracks
+('92', 'en', 'Horror of the Crack'),
+('93', 'en', 'Cracked Serpent'),
+('94', 'en', 'Cracken'),
+
+Gigantic Cave
+('95', 'en', 'Underworld Beast King'),
+
+Skylands Floating Cluster
+('96', 'en', 'Flying Lizard'),
+('97', 'en', 'Stone Imp'),
+('98', 'en', 'Gargoyle'),
+('99', 'en', 'Giant Stone Golem'),
+
+Giant Creature Rift
+('100', 'en', 'Mossy Colossus'),
+('101', 'en', 'Giant Turtle'),
+('102', 'en', 'Flying Turtle'),
+
+Skyfrost Floating Island
+('103', 'en', 'Ancient Turtle'),
+('104', 'en', 'Ancient Frostmage'),
+('105', 'en', 'Frozen Spirit'),
+
+Floating Flame Island
+('106', 'en', 'Wyrm of the Frost'),
+('107', 'en', 'Magma Lizard'),
+('108', 'en', 'Fire Eater'),
+('109', 'en', 'Fiery Dragon'),
+
+Dragon's Rift
+('110', 'en', 'Dragon of Air'),
+('111', 'en', 'Dragon of Earth'),
+('112', 'en', 'Dragon of Frost'),
+('113', 'en', 'Dragon of Flames'),
+
+
+
+
+INSERT INTO statsprofil
+VALUES
+(10, 'fighter');
+
+INSERT INTO statsrepartition
+VALUES
+(10, 1, 40),
+(10, 3, 40),
+(10, 5, 30),
+(10, 7, 15),
+(10, 9, 25);
+
+
+
+
+-- 2 smorc, 3 tank_stun, 4 crit, 5 tank_armor_stun, 6 tank_will, 7 damage, 8 damage_crit, 9 tanky, 10 fighter
+
+INSERT INTO statsmonstres
+VALUES
+(82, 8),
+(83, 2),
+(84, 4),
+(85, 5),
+(86, 2),
+(87, 10),
+(88, 8),
+(89, 8),
+(90, 9),
+(91, 8),
+(92, 8),
+(93, 7),
+(94, 10),
+(95, 10),
+(96, 2),
+(97, 6),
+(98, 3),
+(99, 9),
+(100, 3),
+(101, 6),
+(102, 2),
+(103, 9),
+(104, 10),
+(105, 3),
+(106, 3),
+(107, 4),
+(108, 10),
+(109, 8),
+(110, 10),
+(111, 9),
+(112, 3),
+(113, 8);
+
+INSERT INTO monstresgroupes
+VALUES
+(78, 82, 1),
+(79, 83, 1),
+(80, 84, 1),
+(81, 85, 1),
+(82, 86, 1),
+(83, 87, 1),
+(84, 88, 1),
+(85, 89, 1),
+(86, 90, 1),
+(87, 91, 1),
+(88, 92, 1),
+(89, 93, 1),
+(90, 94, 1),
+
+real group 1
+(91, 95, 1),
+(91, 86, 3),
+
+(92, 96, 1),
+(93, 97, 1),
+(94, 98, 1),
+(95, 99, 1),
+(96, 100, 1),
+(97, 101, 1),
+(98, 102, 1),
+(99, 103, 1),
+(100, 104, 1),
+(101, 105, 1),
+(102, 106, 1),
+(103, 107, 1),
+(104, 108, 1),
+(105, 109, 1),
+
+realgroup 2
+(106, 110, 1),
+(106, 111, 1),
+(106, 112, 1),
+(106, 113, 1);
+
+
+
+
+INSERT INTO shop VALUES (NULL, 0.05, 1), (NULL, 0.05, 1), (NULL, 0.05, 1);
+
+INSERT INTO areasshops VALUES (Underground Dwarf Kingdom, 10), (Floating Ruins, 11), (Dragonflame Ruins, 12);
+
+
+INSERT INTO sellableitems VALUES
+(NULL, Pandrandom Lay Gendary Box, 130, 1, 1300),
+(NULL, Pandrandom Lay Gendary Box, 160, 1, 1800),
+(NULL, Pandrandom Lay Gendary Box, 200, 1, 2500),
+(NULL, Homemade Energy Drink, 1, 1, 4000),
+(NULL, Energy Drink, 1, 1, 10000),
+(NULL, Skystone Sword, 160, 1, 200000),
+(NULL, Skystone Chestplate, 160, 1, 200000),
+(NULL, Skystone Leggings, 160, 1, 200000),
+(NULL, Skystone Helmet, 160, 1, 200000),
+(NULL, Skystone, 1, 1, 100000);
+
+
+INSERT INTO shopitems VALUES 
+Underground Dwarf Kingdom
+(10, 25), Pandrandom Lay Gendary Box, 130, 1, 1300),
+(10, 28), Homemade Energy Drink, 1, 1, 4000),
+(10, 29), Energy Drink, 1, 1, 10000),
+
+Floating Ruins
+(11, 26), Pandrandom Lay Gendary Box, 160, 1, 1800),
+(11, 28), Homemade Energy Drink, 1, 1, 4000),
+(11, 29), Energy Drink, 1, 1, 10000),
+(11, 30), Skystone Sword, 160, 1, 200000),
+(11, 31), Skystone Chestplate, 160, 1, 200000),
+(11, 32), Skystone Leggings, 160, 1, 200000),
+(11, 33), Skystone Helmet, 160, 1, 200000),
+
+Dragonflame Ruins
+(12, 27), Pandrandom Lay Gendary Box, 200, 1, 2500),
+(12, 28), Homemade Energy Drink, 1, 1, 4000),
+(12, 29), Energy Drink, 1, 1, 10000),
+(12, 34); Skystone, 1, 1, 100000);
