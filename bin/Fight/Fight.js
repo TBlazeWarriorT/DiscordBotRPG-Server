@@ -167,9 +167,19 @@ class Fight {
 
         let isFirstTeamAlive = this.isThisTeamAlive(0);
         let isSecondTeamAlive = this.isThisTeamAlive(1);
-
+        let spawnBoss = this.spawnBoss;
+        
         if (isFirstTeamAlive == true && isSecondTeamAlive == true) {
             this.initiativeUpdate();
+            await this.update();
+        } else if (this.finalBoss) {
+            //load boss monster
+            let boss = Globals.areasManager.getMonsterIdIn(47, 2);
+            this.entities = [
+                this.entities1,
+                boss
+            ];
+            this.finalBoss = false;
             await this.update();
         } else if (isFirstTeamAlive == false) {
             this.winnerGroup = 1;
