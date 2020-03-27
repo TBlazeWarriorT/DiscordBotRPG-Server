@@ -8,7 +8,7 @@ class Fight {
      * de worldEntities
      */
 
-    constructor(entities1, entities2, lang = "en", spawnBoss = false) {
+    constructor(entities1, entities2, lang = "en", finalBoss = false) {
         /**
          * @type {Array<WorldEntity>}
          */
