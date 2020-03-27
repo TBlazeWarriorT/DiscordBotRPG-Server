@@ -173,27 +173,34 @@ VALUES
 (25, 57, 10),
 (25, 58, 5),
 (25, 59, 5),
+
 (26, 57, 10),
 (26, 58, 5),
 (26, 59, 5),
+
 (27, 57, 10),
 (27, 58, 5),
 (27, 59, 5),
+
 (28, 57, 10),
 (28, 58, 5),
 (28, 59, 5),
+
 (29, 68, 10),
 (29, 69, 2),
 (29, 70, 2),
 (29, 71, 2),
+
 (30, 68, 10),
 (30, 69, 4),
 (30, 70, 1),
 (30, 71, 1),
+
 (31, 68, 10),
 (31, 69, 1),
 (31, 70, 1),
 (31, 71, 4),
+
 (32, 68, 10),
 (32, 69, 1),
 (32, 70, 4),
@@ -210,8 +217,8 @@ INSERT INTO localizationregions
 VALUES
     (6, "en", "The Underground World", "https://i0.wp.com/www.miskasmaps.com/wp-content/uploads/2016/05/030_crystal_cave-web.jpg"),
     (6, "pt-BR", "O Mundo Subterrâneo", "https://i0.wp.com/www.miskasmaps.com/wp-content/uploads/2016/05/030_crystal_cave-web.jpg"),
-    (7, "en", "Dragonflame Rift", "https://i.imgur.com/zcunYo6.jpg");
-    (7, "pt-BR", "Fenda da Chama Dracônica", "https://i.imgur.com/zcunYo6.jpg"),
+    (7, "en", "Dragonflame Rift", "https://i.imgur.com/zcunYo6.jpg"),
+    (7, "pt-BR", "Fenda da Chama Dracônica", "https://i.imgur.com/zcunYo6.jpg");
 
 -- Areas
 -- type 1 wild, 2 city, 3 dungeon
@@ -356,32 +363,39 @@ VALUES
 (35, 23),
 (35, 24),
 (35, 25),
+
 (37, 21),
 (37, 24),
 (37, 28),
 (37, 30),
+
 (38, 34),
 (38, 35),
 (38, 27),
 (38, 29),
+
 (39, 23),
 (39, 24),
 (39, 25),
+
 (42, 26),
 (42, 28),
 (42, 57),
 (42, 58),
 (42, 59),
+
 (43, 27),
 (43, 30),
 (43, 58),
 (43, 59),
 (43, 70),
+
 (44, 24),
 (44, 25),
 (44, 57),
 (44, 58),
 (44, 69),
+
 (45, 34),
 (45, 57),
 (45, 69),
@@ -411,34 +425,47 @@ VALUES
 INSERT INTO areaspaths
 VALUES
 (34, 35, 300, 0),
+
 (35, 34, 300, 0),
 (35, 36, 30, 0),
 (35, 41, 350, 0),
+
 (36, 35, 45, 0),
 (36, 37, 45, 0),
 (36, 38, 45, 0),
+
 (37, 36, 45, 0),
 (37, 39, 60, 0),
 (37, 40, 60, 0),
+
 (38, 36, 45, 0),
 (38, 40, 60, 0),
+
 (39, 37, 60, 0),
+
 (40, 37, 60, 0),
+
 (41, 35, 300, 0),
 (41, 42, 30, 0),
 (41, 43, 30, 0),
+
 (42, 41, 30, 0),
 (42, 43, 30, 0),
+
 (43, 41, 30, 0),
 (43, 44, 30, 0),
 (43, 45, 30, 0),
+
 (44, 43, 30, 0),
 (44, 47, 60, 0),
+
 (45, 43, 30, 0),
 (45, 46, 60, 0),
 (45, 47, 60, 0),
+
 (46, 45, 60, 0),
 (46, 47, 60, 0),
+
 (47, 44, 60, 0),
 (47, 45, 60, 0),
 (47, 46, 60, 0);
@@ -452,7 +479,7 @@ VALUES
 
 REPLACE INTO monstres
 VALUES
-(82, 0, 1);
+(82, 0, 1); -- this removes the false monster that used to be there --
 
 INSERT INTO monstres
 VALUES
@@ -483,10 +510,11 @@ VALUES
 (107, 0, 1),
 (108, 0, 1),
 (109, 0, 2),
-(110, 0, 3),
-(111, 0, 3),
-(112, 0, 3),
-(113, 0, 3);
+(110, 0, 2),
+(111, 0, 2),
+(112, 0, 2),
+(113, 0, 2),
+(114, 0, 3);
 
 INSERT INTO localizationmonsters
 VALUES
@@ -553,11 +581,14 @@ VALUES
 ('112', 'en', 'Dragon of Frost'),
 ('112', 'pt-BR', 'Dragão da Neve'),
 ('113', 'en', 'Dragon of Flames'),
-('113', 'pt-BR', 'Dragão das Chamas');
+('113', 'pt-BR', 'Dragão das Chamas'),
+('114', 'en', 'Dragon of Death'),
+('114', 'pt-BR', 'Dragão da Morte');
 
 INSERT INTO statsprofil
 VALUES
-(10, 'fighter');
+(10, 'fighter'),
+(11, 'death'); -- used on the death dragon 'final boss' --
 
 INSERT INTO statsrepartition
 VALUES
@@ -565,7 +596,13 @@ VALUES
 (10, 3, 40),
 (10, 5, 30),
 (10, 7, 15),
-(10, 9, 25);
+(10, 9, 25),
+
+(11, 1, 60),
+(11, 3, 60),
+(11, 5, 40),
+(11, 7, 100),
+(11, 9, 40);
 
 -- 2 smorc, 3 tank_stun, 4 crit, 5 tank_armor_stun, 6 tank_will, 7 damage, 8 damage_crit, 9 tanky, 10 fighter
 
@@ -602,7 +639,8 @@ VALUES
 (110, 10),
 (111, 9),
 (112, 3),
-(113, 8);
+(113, 8),
+(114, 11);
 
 INSERT INTO monstresgroupes
 VALUES
@@ -638,7 +676,8 @@ VALUES
 (106, 110, 1),
 (106, 111, 1),
 (106, 112, 1),
-(106, 113, 1);
+(106, 113, 1),
+(107, 114, 1); --temporary death dragon thing--
 
 
 INSERT INTO areasmonsters
@@ -647,35 +686,46 @@ VALUES
 (35, 79, 83),
 (35, 80, 84),
 (35, 81, 85),
+
 (37, 82, 86),
 (37, 83, 87),
 (37, 84, 88),
+
 (38, 85, 89),
 (38, 86, 90),
 (38, 87, 91),
+
 (39, 88, 92),
 (39, 89, 93),
 (39, 90, 94),
+
 (40, 91, 95),
 (40, 91, 86),
+
 (42, 92, 96),
 (42, 93, 97),
 (42, 94, 98),
 (42, 95, 99),
+
 (43, 96, 100),
 (43, 97, 101),
 (43, 98, 102),
 (43, 99, 103),
+
 (44, 100, 104),
 (44, 101, 105),
 (44, 102, 106),
+
 (45, 103, 107),
 (45, 104, 108),
 (45, 105, 109),
+
 (47, 106, 110),
 (47, 106, 111),
 (47, 106, 112),
-(47, 106, 113);
+(47, 106, 113),
+
+(47, 107, 114); --temporary death dragon thing--
 
 INSERT INTO shop VALUES (NULL, 0.05, 1), (NULL, 0.05, 1), (NULL, 0.05, 1);
 
