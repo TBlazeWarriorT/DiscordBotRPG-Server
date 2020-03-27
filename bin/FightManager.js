@@ -83,7 +83,7 @@ class FightManager {
         }
     }
 
-    async fightPvE(users, monsters, userid, canIFightTheMonster, lang) {
+    async fightPvE(users, monsters, userid, canIFightTheMonster, lang, finalBoss) {
         let toApi = {
             beingAttacked: false,
             team1_number: users.length,
@@ -94,7 +94,7 @@ class FightManager {
         if (timeToFight < 0 && !alreadyInBattle) {
             let enemies = await this.loadMonsters(monsters, users);
             let thisPvEFight = {
-                fight: new FightPvE(users, enemies, lang),
+                fight: new FightPvE(users, enemies, lang, finalBoss),
             };
             await thisPvEFight.fight.init();
 
